@@ -1,0 +1,236 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_service
+
+- story: lecture path 
+  steps:
+  - intent: lecture
+    entities:
+      - content_type: "lecture"
+  - slot_was_set:
+      - content_type: "lecture"
+  - action: action_lectures
+
+- story: deliverable path 
+  steps:
+  - intent: deliverable
+    entities:
+      - content_type: "deliverable"
+  - slot_was_set:
+      - content_type: "deliverable"
+  - action: action_deliverables
+
+- story: individual path 
+  steps:
+  - intent: individual
+    entities:
+      - deliverable_type: "individual"
+  - slot_was_set:
+      - deliverable_type: "individual"
+  - action: action_individualdeliverables
+
+- story: takeaways path
+  steps:
+  - intent: takeaways
+    entities:
+      - individualdeliverable_type: "takeaways"
+  - slot_was_set:
+      - individualdeliverable_type: "takeaways"
+  - action: action_takeaways
+
+- story: template path
+  steps:
+  - intent: template
+    entities:
+      - takeaway_type: "template"
+  - action: utter_takeawaytemplate
+
+- story: submit path
+  steps:
+  - intent: submit
+    entities:
+      - takeaway_type: "submit"
+  - slot_was_set:
+      - takeaway_type: "submit"
+  - action: action_submittakeaways
+
+- story: submittakeaway1 path
+  steps:
+  - intent: submittakeaway1
+    entities:
+      - submittakeaway_type: "submittakeaway1"
+  - action: utter_submittakeaway1
+
+- story: submittakeaway2 path
+  steps:
+  - intent: submittakeaway2
+    entities:
+      - submittakeaway_type: "submittakeaway2"
+  - action: utter_submittakeaway2
+
+- story: submittakeaway3 path
+  steps:
+  - intent: submittakeaway3
+    entities:
+      - submittakeaway_type: "submittakeaway3"
+  - action: utter_submittakeaway3
+
+- story: submittakeaway4 path
+  steps:
+  - intent: submittakeaway4
+    entities:
+      - submittakeaway_type: "submittakeaway4"
+  - action: utter_submittakeaway4
+
+- story: submittakeaway5 path
+  steps:
+  - intent: submittakeaway5
+    entities:
+      - submittakeaway_type: "submittakeaway5"
+  - action: utter_submittakeaway5
+
+- story: submittakeaway6 path
+  steps:
+  - intent: submittakeaway6
+    entities:
+      - submittakeaway_type: "submittakeaway6"
+  - action: utter_submittakeaway6
+
+- story: opportunity path
+  steps:
+  - intent: opportunity
+    entities:
+      - individualdeliverable_type: "opportunity"
+  - slot_was_set:
+      - individualdeliverable_type: "opportunity"
+  - action: action_opportunity
+
+- story: submit_opportunityslide path
+  steps:
+  - intent: submit_opportunityslide
+    entities:
+      - submitopportunity_type: "submit_opportunityslide"
+  - action: utter_opportunityslide
+
+- story: submit_opportunityreport path
+  steps:
+  - intent: submit_opportunityreport
+    entities:
+      - submitopportunity_type: "submit_opportunityreport"
+  - action: utter_opportunityreport
+
+- story: guide_opportunity path
+  steps:
+  - intent: guide_opportunity
+    entities:
+      - opportunity_type: "guide_opportunity"
+  - action: utter_guide_opportunity
+
+- story: submit_opportunity path
+  steps:
+  - intent: submit_opportunity
+    entities:
+      - opportunity_type: "submit_opportunity"
+  - slot_was_set:
+      - opportunity_type: "submit_opportunity"
+  - action: action_submitopportunity
+
+- story: group path
+  steps:
+  - intent: group
+    entities:
+      - deliverable_type: "group"
+  - slot_was_set:
+      - deliverable_type: "group"
+  - action: action_groupdeliverable
+
+- story: template_group path
+  steps:
+  - intent: template_group
+    entities:
+      - group_type: "template_group"
+  - action: utter_template_group
+
+
+- story: submit_groupslide path
+  steps:
+  - intent: submit_groupslide
+    entities:
+      - submitgroup_type: "submit_groupslide"
+  - action: utter_submit_groupslide
+
+- story: submit_groupreport path
+  steps:
+  - intent: submit_groupreport
+    entities:
+      - submitgroup_type: "submit_groupreport"
+  - action: utter_submit_groupreport
+
+- story: submit_group path
+  steps:
+  - intent: submit_group
+    entities:
+      - group_type: "submit_group"
+  - slot_was_set:
+      - group_type: "submit_group"
+  - action: action_submitgroup
+
+- story: lecture1 path 
+  steps:
+  - intent: lecture1
+    entities:
+      - lecture_type: "lecture1"
+  - slot_was_set:
+      - lecture_type: "lecture1"
+  - action: utter_lecture1_slide
+
+- story: lecture2 path 
+  steps:
+  - intent: lecture2
+    entities:
+      - lecture_type: "lecture2"
+  - slot_was_set:
+      - lecture_type: "lecture2"
+  - action: utter_lecture2_slide
+
+- story: lecture3 path 
+  steps:
+  - intent: lecture3
+    entities:
+      - lecture_type: "lecture3"
+  - slot_was_set:
+      - lecture_type: "lecture3"
+  - action: utter_lecture3_slide
+
+- story: lecture4 path 
+  steps:
+  - intent: lecture4
+    entities:
+      - lecture_type: "lecture4"
+  - slot_was_set:
+      - lecture_type: "lecture4"
+  - action: utter_lecture4_slide
+
+- story: lecture5 path 
+  steps:
+  - intent: lecture5
+    entities:
+      - lecture_type: "lecture5"
+  - slot_was_set:
+      - lecture_type: "lecture5"
+  - action: utter_lecture5_slide
+
+- story: lecture6 path 
+  steps:
+  - intent: lecture6
+    entities:
+      - lecture_type: "lecture6"
+  - slot_was_set:
+      - lecture_type: "lecture6"
+  - action: utter_lecture6_slide

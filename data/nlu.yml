@@ -1,0 +1,309 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thanks
+    - thanks a lot
+    - thank you so much
+    - thanks a million
+    - That's very kind of you
+    - It meant a lot to me
+    - I can't thank you enough
+    - Thank you for helping me
+    - Thanks for helping
+
+- intent: ok
+  examples: |
+    - ok
+    - okay
+    - alright
+    - all right
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: lecture
+  examples: |
+    - I want to read the [lecture]{"entity": "content_type"}
+    - read the [session]{"entity": "content_type"}
+    - download [lectures]{"entity": "content_type"}
+    - download [slides]{"entity": "content_type"}
+
+
+- intent: deliverable
+  examples: |
+    - I want to know the [deliverable]{"entity": "content_type"}
+    - download guideline for the [assignments]{"entity": "content_type"}
+    - view [deliverable]{"entity": "content_type"}
+
+- intent: individual
+  examples: |
+    - I want to know the [individual]{"entity": "deliverable_type"} deliverable
+    - download guideline for the [individual]{"entity": "deliverable_type"} assignment
+    - view [individual]{"entity": "deliverable_type"} submission
+
+- intent: group
+  examples: |
+    - I want to know the [group]{"entity": "deliverable_type"} deliverable
+    - download guideline for the [group]{"entity": "deliverable_type"} assignment
+    - view [group]{"entity": "deliverable_type"} submission
+
+- intent: Takeaways
+  examples: |
+    - I want to know about the [takeaways]{"entity": "individualdeliverable_type"}
+    - I need to understand the [takeaways]{"entity": "individualdeliverable_type"}
+    - help me with [takeaways]{"entity": "individualdeliverable_type"}
+
+- intent: Opportunity
+  examples: |
+    - I want to know about the [opportunity]{"entity": "individualdeliverable_type"}
+    - I need to understand the [opportunity assignment]{"entity": "individualdeliverable_type"}
+    - help me with [opportunity]{"entity": "individualdeliverable_type"} assignment
+
+    
+- intent: template
+  examples: |
+    - I want to know about the [template]{"entity": "individualdeliverable_type"} for takeaways
+    - How to write the takeaway [template]{"entity": "individualdeliverable_type"}
+    - help me with [guideline]{"entity": "individualdeliverable_type"} for takeaway assignment
+   
+- intent: submit
+  examples: |
+    - I want to know where to [submit]{"entity": "individualdeliverable_type"} takeaways
+    - How to submit the takeaway [submit]{"entity": "individualdeliverable_type"}
+    - help me with [submit]{"entity": "individualdeliverable_type"} submission
+
+- intent: submittakeaway1
+  examples: |
+    - I want to know where to [submittakeaway1]{"entity": "submittakeaway_type"} submit takeaway assignment 1
+    - How to submit the takeaway assignment 1 [submittakeaway1]{"entity": "submittakeaway_type"}
+    - where to [submittakeaway2]{"entity": "submittakeaway_type"} Good AI opportunity assignment
+    - where to [submittakeaway2]{"entity": "submittakeaway_type"} Good AI opportunity takeaway assignment
+    - where to [submittakeaway2]{"entity": "submittakeaway_type"} takeaway 1
+
+- intent: submittakeaway2
+  examples: |
+    - I want to know where to [submittakeaway2]{"entity": "submittakeaway_type"} submit takeaway assignment 2
+    - How to submit the takeaway assignment 2 [submittakeaway2]{"entity": "submittakeaway_type"}
+    - where to [submittakeaway2]{"entity": "submittakeaway_type"} AI STEM assignment
+    - where to [submittakeaway2]{"entity": "submittakeaway_type"} AI STEM takeaway assignment
+    - where to [submittakeaway2]{"entity": "submittakeaway_type"} takeaway 2
+
+- intent: submittakeaway3
+  examples: |
+    - I want to know where to [submittakeaway3]{"entity": "submittakeaway_type"} submit takeaway assignment 3
+    - How to submit the takeaway assignment 3 [submittakeaway3]{"entity": "submittakeaway_type"}
+    - where to [submittakeaway3]{"entity": "submittakeaway_type"} Company Value Creation assignment
+    - where to [submittakeaway3]{"entity": "submittakeaway_type"} Company Value Creation takeaway assignment
+    - where to [submittakeaway3]{"entity": "submittakeaway_type"} takeaway 3
+
+- intent: submittakeaway4
+  examples: |
+    - I want to know where to [submittakeaway4]{"entity": "submittakeaway_type"} submit takeaway assignment 4
+    - How to submit the takeaway assignment 4 [submittakeaway4]{"entity": "submittakeaway_type"}
+    - where to [submittakeaway4]{"entity": "submittakeaway_type"} City Value Creation assignment
+    - where to [submittakeaway4]{"entity": "submittakeaway_type"} City Value Creation takeaway assignment
+    - where to [submittakeaway4]{"entity": "submittakeaway_type"} takeaway 4
+
+- intent: submittakeaway5
+  examples: |
+    - I want to know where to [submittakeaway5]{"entity": "submittakeaway_type"} submit takeaway assignment 5
+    - How to submit the takeaway assignment 5 [submittakeaway5]{"entity": "submittakeaway_type"}
+    - where to [submittakeaway5]{"entity": "submittakeaway_type"} Ecosystems assignment
+    - where to [submittakeaway5]{"entity": "submittakeaway_type"} Ecosystems takeaway assignment
+    - where to [submittakeaway5]{"entity": "submittakeaway_type"} takeaway 5
+
+- intent: submittakeaway6
+  examples: |
+    - I want to know where to [submittakeaway6]{"entity": "submittakeaway_type"} submit takeaway assignment 6
+    - How to submit the takeaway assignment 6 [submittakeaway6]{"entity": "submittakeaway_type"}
+    - where to [submittakeaway6]{"entity": "submittakeaway_type"} Investment assignment
+    - where to [submittakeaway6]{"entity": "submittakeaway_type"} Investment takeaway assignment
+    - where to [submittakeaway6]{"entity": "submittakeaway_type"} takeaway 6
+
+- intent: submit_opportunityslide
+  examples: |
+    - I want to know where to [submit_opportunityslide]{"entity": "submitopportunity_type"} submit slides
+    - How to submit the takeaway assignment 6 [submit_opportunityslide]{"entity": "submitopportunity_type"}
+    - where to [submit_opportunityslide]{"entity": "submitopportunity_type"} opportunity assignment
+    - where to [submit_opportunityslide]{"entity": "submitopportunity_type"} assignment slides
+    - where to [submit_opportunityslide]{"entity": "submitopportunity_type"} opportunity assignment slides
+
+- intent: submit_opportunityreport
+  examples: |
+    - I want to know where to [submit_opportunityreport]{"entity": "submitopportunity_type"} submit opportunity assignment report
+    - How to submit the takeaway assignment 6 [submit_opportunityreport]{"entity": "submitopportunity_type"}
+    - where to [submit_opportunityreport]{"entity": "submitopportunity_type"} opportunity assignment final document
+    - where to [submit_opportunityreport]{"entity": "submitopportunity_type"} opportunity assignment report
+    - where to [submit_opportunityreport]{"entity": "submitopportunity_type"}   
+    
+- intent: guide_opportunity
+  examples: |
+    - I want to know about guide [guide_opportunity]{"entity": "opportunity_type"} for opportunity deliverable
+    - How to write the opportunity [guide_opportunity]{"entity": "opportunity_type"}
+    - help me with [guide_opportunity]{"entity": "opportunity_type"} for opportunity assignment
+   
+- intent: template_group
+  examples: |
+    - I want to know about guide [template_group]{"entity": "group_type"} for group deliverable
+    - How to write the AI-Leader [template_group]{"entity": "group_type"}
+    - help me with [template_group]{"entity": "group_type"} for AI-Leader assignment
+
+- intent: submit_group
+  examples: |
+    - I want to know where to [submit_group]{"entity": "group_type"} submit group deliverable
+    - How to submit the group [submit_group]{"entity": "group_type"} deliverable
+    - where to [submit_group]{"entity": "group_type"} group assignment
+
+- intent: submit_groupslide
+  examples: |
+    - I want to know where to [submit_groupslide]{"entity": "submitgroup_type"} submit group deliverable slides
+    - How to submit the group [submit_groupslide]{"entity": "submitgroup_type"} deliverable slides
+    - where to [submit_groupslide]{"entity": "submitgroup_type"} group assignment slides
+
+- intent: submit_groupreport
+  examples: |
+    - I want to know where to [submit_groupreport]{"entity": "submitgroup_type"} submit group deliverable report
+    - How to submit the group [submit_groupreport]{"entity": "submitgroup_type"} deliverable final report
+    - where to [submit_groupreport]{"entity": "submitgroup_type"} group assignment report
+
+- intent: lecture1
+  examples: |
+    - I want to read the [lecture1]{"entity": "lecture_type"}
+    - read the [lecture1]{"entity": "lecture_type"}
+    - download [lecture1]{"entity": "lecture_type"} slides
+    - download [lecture1]{"entity": "lecture_type"}
+
+- intent: lecture2
+  examples: |
+    - I want to read the [lecture2]{"entity": "lecture_type"}
+    - read the [lecture2]{"entity": "lecture_type"}
+    - download [lecture2]{"entity": "lecture_type"} slides
+    - download [lecture2]{"entity": "lecture_type"}
+
+- intent: lecture3
+  examples: |
+    - I want to read the [lecture3]{"entity": "lecture_type"}
+    - read the [lecture3]{"entity": "lecture_type"}
+    - download [lecture3]{"entity": "lecture_type"} slides
+    - download [lecture3]{"entity": "lecture_type"}
+
+- intent: lecture4
+  examples: |
+    - I want to read the lecture4 [lecture4]{"entity": "lecture_type"}
+    - I want to read the City Value Creation lecture [lecture4]{"entity": "lecture_type"}
+    - read the lecture [lecture4]{"entity": "lecture_type"} 4
+    - download lecture [lecture4]{"entity": "lecture_type"} 4 slides
+    - download lecture4 [lecture4]{"entity": "lecture_type"}
+    - download the fourth lecture [lecture4]{"entity": "lecture_type"}
+    - read the session 4 [lecture4]{"entity": "lecture_type"} slides 
+
+- intent: lecture5
+  examples: |
+    - I want to read the [lecture5]{"entity": "lecture_type"}
+    - read the [lecture5]{"entity": "lecture_type"}
+    - download [lecture5]{"entity": "lecture_type"} slides
+    - download [lecture5]{"entity": "lecture_type"}
+
+- intent: lecture6
+  examples: |
+    - I want to read the [lecture6]{"entity": "lecture_type"}
+    - read the [lecture6]{"entity": "lecture_type"}
+    - download [lecture6]{"entity": "lecture_type"} slides
+    - download [lecture6]{"entity": "lecture_type"}
+
