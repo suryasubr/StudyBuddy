@@ -1,0 +1,191 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - ok
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - lecture
+  - deliverable
+  - lecture1
+  - lecture2
+  - lecture3
+  - lecture4
+  - lecture5
+  - lecture6
+  - individual
+  - group
+  - takeaways
+  - opportunity
+  - template
+  - submit
+  - submittakeaway1
+  - submittakeaway2
+  - submittakeaway3
+  - submittakeaway4
+  - submittakeaway5
+  - submittakeaway6
+  - submit_opportunity
+  - guide_opportunity
+  - submit_opportunityslide
+  - submit_opportunityreport
+  - template_group
+  - submit_group
+  - submit_groupslide
+  - submit_groupreport
+  - out_of_scope
+
+entities:
+  - content_type
+  - lecture_type
+  - deliverable_type
+  - individualdeliverable_type
+  - takeaway_type
+  - submittakeaway_type
+  - opportunity_type
+  - submit_opportunityslide
+  - action_groupdeliverable
+  - action_submitgroup
+
+slots:
+  content_type:
+    type: text
+  lecture_type:
+    type: text
+  deliverable_type: 
+    type: text
+  individualdeliverable_type:
+    type: text
+  takeaway_type:
+    type: text
+  submittakeaway_type:
+    type: text
+  opportunity_type:
+    type: text
+  submitopportunity_type:
+    type: text
+  action_groupdeliverable:
+    type: text
+  action_submitgroup:
+    type: text
+  group_type:
+    type: text
+  submitgroup_type:
+    type: text
+
+responses:
+  utter_greet:
+  - text: "Hey there, I'm Studybuddy the SERS virtual assistant"
+
+  utter_out_of_scope:
+  - text: "I'm sorry, I didn't quite understand that."
+    image: "https://i.ibb.co/PwVqpR5/botthink.png"
+  
+  utter_sers_email:
+  - text: "Please contact sersprograms@gmail.com for further assistance."
+
+  utter_operatebest:
+  - text: "I operate best when asked short, direct questions"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_ok:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "You know where to find me"
+
+  utter_thanks:
+  - text: "I'm here to help"
+
+  utter_iamabot:
+  - text: "I'm a bot, and I'm still learning. For more assistance please contact eduardobailetti@cunet.carleton.ca"
+
+  utter_lecture:
+  - text: here is the lecture [lecture](https://github.com/ashus3868/InnovateYourselfBot/blob/main/actions/actions.py).
+
+  utter_takeawaytemplate:
+  - text: Please click on this link to download the template for the takeaway assignment [template](https://globalgers.org/moodle/mod/resource/view.php?id=536&redirect=1).
+
+  utter_submittakeaway1:
+  - text: Please [submittakeaway1] your Good AI opportunity takeaway assignment here (https://globalgers.org/moodle/mod/assign/view.php?id=675).
+
+  utter_submittakeaway2:
+  - text: Please [submittakeaway2] your AI STEM takeaway assignment here (https://globalgers.org/moodle/mod/assign/view.php?id=686).
+
+  utter_submittakeaway3:
+  - text: Please [submittakeaway3] your Company Value Creation takeaway assignment here (https://globalgers.org/moodle/mod/assign/view.php?id=709).
+
+  utter_submittakeaway4:
+  - text: Please [submittakeaway4] your City Value Creation takeaway assignment here (https://globalgers.org/moodle/mod/assign/view.php?id=745).
+
+  utter_submittakeaway5:
+  - text: Please [submittakeaway5] your Ecosystems takeaway assignment here (https://globalgers.org/moodle/mod/assign/view.php?id=773).
+
+  utter_submittakeaway6:
+  - text: Please [submittakeaway6] your Investment takeaway assignment here (https://globalgers.org/moodle/mod/assign/view.php?id=794).
+
+  utter_opportunityslide:
+  - text: Please [submit_opportunityslide] your opportunity slides here (https://globalgers.org/moodle/mod/assign/view.php?id=293).
+
+  utter_opportunityreport:
+  - text: Please [submit_opportunityreport] your opportunity report here (https://globalgers.org/moodle/mod/assign/view.php?id=294).
+
+  utter_guide_opportunity:
+  - text: Click on this link to find the guide for the [guide_opportunity] your opportunity assignment (https://globalgers.org/moodle/mod/resource/view.php?id=735).
+
+  utter_template_group: 
+  - text: Click on this link to find the guide for the group assignment AI-Leader (https://globalgers.org/moodle/mod/resource/view.php?id=537).
+
+  utter_submit_groupslide:
+  - text: Please [submit_groupslide] your AI-Leader slides here (https://globalgers.org/moodle/mod/assign/view.php?id=803).
+
+  utter_submit_groupreport:
+  - text: Please [submit_groupreport] your AI-Leader report here (https://globalgers.org/moodle/mod/assign/view.php?id=804).
+
+  utter_lecture1_slide:
+  - text: Please click on this link to down load sldes for lecture 1 "Good AI Opportunity" (https://globalgers.org/moodle/pluginfile.php/12550/mod_resource/content/2/Module%201.%20AI%20for%20Local%20Value_Oct%207.pdf).
+
+  utter_lecture2_slide:
+  - text: Please click on this link to down load sldes for lecture 2 "AI STEM" (https://globalgers.org/moodle/pluginfile.php/4143/mod_resource/content/3/Module%202%20-%20AI%20STEM%20%28WEISS%29.pdf).
+
+  utter_lecture3_slide:
+  - text: Please click on this link to view the sldes for lecture 3 "Company Value Creation" (https://globalgers.org/moodle/mod/resource/view.php?id=687).
+
+  utter_lecture4_slide:
+  - text: Please click on this link to view the sldes for lecture 4 "City Value Creation" (https://globalgers.org/moodle/mod/resource/view.php?id=732).
+
+  utter_lecture5_slide:
+  - text: Please click on this link to view the sldes for lecture 5 "Ecosystems" (https://globalgers.org/moodle/mod/resource/view.php?id=764).
+
+  utter_lecture6_slide:
+  - text: Please click on this link to view the sldes for lecture 6 "Investments" (https://globalgers.org/moodle/mod/resource/view.php?id=780).
+
+actions:
+  - action_service
+  - action_lectures
+  - action_deliverables
+  - action_individualdeliverables
+  - action_takeaways
+  - action_submittakeaways
+  - action_opportunity
+  - action_submitopportunity
+  - action_groupdeliverable
+  - action_submitgroup
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
